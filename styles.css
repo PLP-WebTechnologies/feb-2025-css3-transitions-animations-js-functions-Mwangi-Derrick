@@ -1,0 +1,140 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pulse animation for the animate button */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+/* Animated box styles */
+.animated-box {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    border-radius: 10px;
+    margin: 20px auto;
+    transition: all 0.5s ease;
+}
+
+/* Animation classes */
+.rotate {
+    animation: rotate 2s ease-in-out;
+}
+
+.bounce {
+    animation: bounce 1s ease infinite;
+}
+
+.slide {
+    animation: slide 2s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+/* Theme styles */
+.light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark .btn {
+    background-color: #555;
+}
+
+.dark h1, .dark h2 {
+    color: #f4f4f4;
+}
+
+.blue {
+    background-color: #e6f2ff;
+    color: #003366;
+}
+
+.blue .btn {
+    background-color: #0066cc;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 200px;
+}
